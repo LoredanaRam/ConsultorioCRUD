@@ -1,6 +1,6 @@
-<?php require "partials/header.php";?>
+<?php require "views/partials/header.php";?>
 
 <span>Hola mundo</span>
 
 
-<?php require "partials/footer.php";?>
+<?php require "views/partials/footer.php";?>
