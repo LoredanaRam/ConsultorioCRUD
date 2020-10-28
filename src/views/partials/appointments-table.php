@@ -13,7 +13,7 @@
       <td scope="row">Tortugas Ninja</td>
       <td>Arquitectura proyecto</td>
       <td>28/10/2020</td>
-      <td class="d-none d-sm-block">Tenemos dudas sobre la mejor forma de estructurar el backend del proyecto</td>
+      <td class="d-none d-sm-table-cell">Tenemos dudas sobre la mejor forma de estructurar el backend del proyecto</td>
       <td>
           <div class="d-flex justify-content-around">
               <button type="button" class="btn btn-round btn-primary btn-sm d-flex align-items-center">
@@ -34,7 +34,7 @@
       <td scope="row">Tortugas Ninja</td>
       <td>Arquitectura proyecto</td>
       <td>28/10/2020</td>
-      <td class="d-none d-sm-block">Tenemos dudas sobre la mejor forma de estructurar el backend del proyecto</td>
+      <td class="d-none d-sm-table-cell">Tenemos dudas sobre la mejor forma de estructurar el backend del proyecto</td>
       <td>
           <div class="d-flex justify-content-around">
               <button type="button" class="btn btn-round btn-primary btn-sm d-flex align-items-center">
@@ -55,7 +55,7 @@
       <td scope="row">Tortugas Ninja</td>
       <td>Arquitectura proyecto</td>
       <td>28/10/2020</td>
-      <td class="d-none d-sm-block">Tenemos dudas sobre la mejor forma de estructurar el backend del proyecto</td>
+      <td class="d-none d-sm-table-cell">Tenemos dudas sobre la mejor forma de estructurar el backend del proyecto</td>
       <td>
           <div class="d-flex justify-content-around">
               <button type="button" class="btn btn-round btn-primary btn-sm d-flex align-items-center">

@@ -1,5 +1,10 @@
+.table-appointments{
+    width: 80%;
+}
+
 .table-appointments-row{
     background-color: lightblue;
+    border-top: 5px solid white;
 }
 
 .table-appointments-row:hover{
