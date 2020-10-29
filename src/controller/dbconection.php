@@ -11,6 +11,8 @@ class dbConection {
    {
        try {
            $this->sql = $this->getConection();
+       } catch (PDOException $execp){
+           echo $execp->getMessage();
        }
 
    }
@@ -19,7 +21,7 @@ class dbConection {
    {
        $host = "localhost";
        $user = "root";
-       $pass = "";
+       $pass = "root";
        $dbname = "New_db";
        $charset = "utf8";
        $options = [PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC];
