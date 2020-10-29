@@ -1,35 +1,3 @@
-<form class="form-group col-md-6">
-  
-    <label for="inputName">Name</label>
-    <input type="text" class="form-control" id="inputName" placeholder="Name" required>
-
-    <label for="inputSurname">Surname</label>
-    <input type="text" class="form-control" id="inputSurname" placeholder="Surname" required>
-  
-    
- 
-    <label for="inputReason">Reason of the Visit</label>
-    <select id="inputReason" class="form-control" required>
-      <option selected placeholder= "Choose an option"> </option>
-        <option>...</option>
-        <option>...</option>
-        <option>...</option>
-        <option>...</option>
-
-    </select>
- 
-
-    <label for="inputDescription">Description</label>
-    <input type="text" class="form-control" id="inputDescription" placeholder="Description" required>
-      
-    <button type="submit" class="btn btn-primary">Send</button>
-    <button type="reset" class="btn btn-primary">Reset</button>
-</form>
-
-
-
-
-
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Open modal for @mdo</button>
 
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -42,15 +10,19 @@
         </button>
       </div>
       <div class="modal-body">
+        
         <form>
+          
           <div class="form-group">
           <label for="inputName">Name</label>
-          <input type="text" class="form-control" id="inputName" placeholder="Name" required>
+          <input type="text" class="form-control" id="inputName2" placeholder="Name" required>
           </div>
+         
           <div class="form-group">
-        <label for="inputSurname">Surname</label>
-        <input type="text" class="form-control" id="inputSurname" placeholder="Surname" required>
+          <label for="inputSurname">Surname</label>
+          <input type="text" class="form-control" id="inputSurname" placeholder="Surname" required>
           </div>
+
           <div class="form-group">
           <label for="inputReason">Reason of the Visit</label>
           <select id="inputReason" class="form-control" required>
@@ -58,18 +30,25 @@
             <option>...</option>
             <option>...</option>
             <option>...</option>
-            <option>...</option>          
-          </div>
+            <option>...</option> 
+          </select>         
+          
           <div class="form-group">
-          <label for="inputDescription">Description</label>
-          <input type="text" class="form-control" id="inputDescription" placeholder="Description" required>
+            <label for="inputDescription2">Description</label>
+            <textarea class="form-control" id="message-text"></textarea>
           </div>
-        </form>
-      </div>
+
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Send message</button>
+      <button type="reset" class="btn btn-primary">Reset</button>
+      <button type="submit" class="btn btn-primary">Send</button>
       </div>
+      
+      </form>
+      </div>
+
     </div>
   </div>
 </div>
+
+
+
