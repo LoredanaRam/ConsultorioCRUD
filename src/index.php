@@ -1,6 +1,6 @@
 
 <?php require "controller/dbconection.php";
-    $db = new dbConection();
+    $dataBase = new dbConection();
     
 ?>
 
@@ -11,9 +11,9 @@
 <section>
     <span>Hola mundo</span>
     <?php 
-        $sql = "SELECT * FROM test";
-        $coderResult = $db->mysql->query($sql);
-        echo $coderResult;
+        $coders = "SELECT * FROM citas";
+        $coderResult = $dataBase->mysql->query($coders);
+         
         
     ?>
     <ul>
