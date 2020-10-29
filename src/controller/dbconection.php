@@ -19,10 +19,10 @@ class dbConection {
 
    private function getConection()
    {
-       $host = "localhost";
-       $user = "root";
-       $pass = "root";
-       $dbname = "New_db";
+       $host = "208.91.198.16";
+       $user = "pixelkeb_turtles";
+       $pass = "3E:%9yb$";
+       $dbname = "pixelkeb_consultoriof5";
        $charset = "utf8";
        $options = [PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC];
        $pdo = new pdo("mysql:host={$host};dbname={$dbname};charset={$charset}",$user,$pass,$options);
