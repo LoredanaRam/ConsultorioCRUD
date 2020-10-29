@@ -1,24 +1,89 @@
-.table-appointments{
-    width: 80%;
+:root {
+    --primary: #2EC4B6;
+    --secondary-lighter: #237C82;
+    --secondary:  #FF6666;
+    --danger: #E4572E;
+    --dark: #0E1F2F;
+    --dark-lighter: #18334E;
+    --white: #F8F8FF;
 }
 
-.table-appointments-row{
-    background-color: lightblue;
-    border-top: 5px solid white;
+*{
+    color: var(--white);
+}
+
+.text-primary{
+    color: var(--primary)!important;
+}
+
+.bg-dark{
+    background-color: var(--dark)!important;
+}
+
+.bg-dark-lighter{
+    background-color: var(--dark-lighter)!important;
+}
+
+.bg-primary{
+    background-color: var(--primary)!important;
+}
+
+.bg-secondary{
+    background-color: var(--secondary)!important;
+}
+
+.bg-danger{
+    background-color: var(--danger)!important;
+}
+
+.table-appointments{
+    width: 70%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.bg-secondary{
+    background-color: green;
+}
+
+.jumbotron{
+    background:
+        linear-gradient(to right, var(--dark), transparent),
+        url("../../images/jumbotron-background.jpg");
+    background-size: cover;
+    background-position: 80%;
+}
+
+.nav{
+    width: 70%;
 }
 
 .table-appointments-row:hover{
-    background-color: blue;
+    background-color: var(--secondary-lighter)!important;
+}
+
+.table-card-appointment:before{
+    height: 1em;
+    display: table-row;
+    content: '';
 }
 
 .table-appointments-row td:first-child { 
     border-top-left-radius: 16px;
     border-bottom-left-radius: 16px;
+    border-left-width: 1px!important;
+}
+
+.table-appointments-row td{
+    border: 0 solid var(--primary)!important;
+    border-top-width: 1px!important;
+    border-bottom-width: 1px!important;
 }
 
 .table-appointments-row td:last-child { 
     border-top-right-radius: 16px;
     border-bottom-right-radius: 16px;
+    border-right-width: 1px!important;
 }
 
 .btn-round{

@@ -10,7 +10,7 @@
     
 </head>
     
-<body>
+<body class = "d-flex flex-column justify-content-between align-items-center min-h-100 bg-dark">
 
        
     
