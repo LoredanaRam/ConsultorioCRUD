@@ -1,6 +1,6 @@
 
 <?php require "controller/dbconection.php";
-    $dataBase = new dbConection();
+    $database = new dbConection();
     
 ?>
 
@@ -9,17 +9,14 @@
 <?php require "views/partials/navbar.php";?>
 
 <section>
-    <span>Hola mundo</span>
     <?php 
-        $coders = "SELECT * FROM citas";
-        $coderResult = $dataBase->mysql->query($coders);
-         
-        
+        $sql = "SELECT * FROM citas";
+        $coders = $database->mysql->query($sql);
     ?>
     <ul>
-    <?php foreach($sql as $coder){?>
-        <li><?= $coder["id"]?> - <?= $coder["nombre"]?> </li>
-    <?php } ?>
+        <?php foreach($coders as $coder){?>
+            <li> <?= $coder["id"] ?> - <?= $coder["nombre"] ?> </li>
+        <?php } ?>
     </ul>
 
 </section>
