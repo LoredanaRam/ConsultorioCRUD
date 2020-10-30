@@ -1,6 +1,4 @@
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalForm">
-  Pedir Cita
-</button>
+<section>
 
 <div class="modal fade" id="modalForm" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -53,4 +51,6 @@
 <div class="alert alert-success" role="alert"> 
       Ha pedido su cita con éxito! 
 </div>
-    
+
+
+</section>
