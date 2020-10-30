@@ -1,8 +1,8 @@
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalForm">
   Pedir Cita
 </button>
 
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="modalForm" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -11,6 +11,8 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
+
+
       <div class="modal-body">
 
           <form class="form-group" >
@@ -30,26 +32,25 @@
                   <option>el perro se comió mi tarea</option>
                   <option>ayudenme porfavor señor Sergi</option>
                   <option>otros</option>
-
               </select>
 
 
               <label for="inputDescription">Detalle su inquietud</label>
               <input type="text" class="form-control" id="inputDescription" placeholder="Description" required>
                 
-              
+            
+              <div class="modal-footer">
+               
               <button type="reset" class="btn btn-primary">Borrar</button>
+              <button type="submit" class="btn btn-primary">Enviar</button>
 
+              </div>
           </form>
-      </div>
-      <div class="modal-footer">
-       
-        <button type="submit" class="btn btn-primary">Enviar</button>
-      </div>
     </div>
   </div>
 </div>
 
-<div class="alert alert-success" role="alert">
+<div class="alert alert-success" role="alert"> 
       Ha pedido su cita con éxito! 
+</div>
     
