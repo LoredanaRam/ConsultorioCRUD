@@ -18,7 +18,6 @@
             <li> <?= $coder["id"] ?> - <?= $coder["nombre"] ?> </li>
         <?php } ?>
     </ul>
-
 </section>
 
 <?php require "views/partials/scripts.php";?>
