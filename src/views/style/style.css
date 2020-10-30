@@ -46,6 +46,15 @@
     background-color: green;
 }
 
+.border-primary{
+    border-color: var(--primary)!important;
+}
+
+.btn-outline-primary{
+    border-color: var(--primary)!important;
+    color: var(--primary)!important;
+}
+
 .jumbotron{
     background:
         linear-gradient(to right, var(--dark), transparent),

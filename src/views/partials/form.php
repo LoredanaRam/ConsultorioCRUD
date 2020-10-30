@@ -3,7 +3,7 @@
 <div class="modal fade" id="modalForm" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-      <div class="modal-header">
+      <div class="modal-header bg-dark">
         <h5 class="modal-title" id="exampleModalLabel">Solicitud de Cita</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
@@ -11,20 +11,20 @@
       </div>
 
 
-      <div class="modal-body">
+      <div class="modal-body bg-dark">
 
           <form class="form-group" >
               
               <label for="inputName">Nombre</label>
-              <input type="text" class="form-control" id="inputName" placeholder="Name" required>
+              <input type="text" class="form-control bg-dark-lighter border-primary" id="inputName" placeholder="Name" required>
 
               <label for="inputSurname">Apellido</label>
-              <input type="text" class="form-control" id="inputSurname" placeholder="Surname" required>
+              <input type="text" class="form-control bg-dark-lighter  border-primary" id="inputSurname" placeholder="Surname" required>
 
               
 
               <label for="inputReason">Motivo de la visita</label>
-              <select id="inputReason" class="form-control" required>
+              <select id="inputReason" class="form-control bg-dark-lighter  border-primary" required>
                 <option selected placeholder= "Choose an option"> </option>
                   <option>no me anda el php</option>
                   <option>el perro se comió mi tarea</option>
@@ -34,13 +34,13 @@
 
 
               <label for="inputDescription">Detalle su inquietud</label>
-              <input type="text" class="form-control" id="inputDescription" placeholder="Description" required>
+              <input type="text" class="form-control bg-dark-lighter  border-primary" id="inputDescription" placeholder="Description" required>
                 
             
               <div class="modal-footer">
                
-              <button type="reset" class="btn btn-primary">Borrar</button>
-              <button type="submit" class="btn btn-primary">Enviar</button>
+              <button type="reset" class="btn btn-outline-primary">Borrar</button>
+              <button type="submit" class="btn btn-outline-primary">Enviar</button>
 
               </div>
           </form>
