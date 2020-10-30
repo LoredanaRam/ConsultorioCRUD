@@ -3,7 +3,7 @@
 <div class="modal fade" id="modalForm" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-      <div class="modal-header bg-dark">
+      <div class="modal-header bg-dark border-0">
         <h5 class="modal-title" id="exampleModalLabel">Solicitud de Cita</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
@@ -37,7 +37,7 @@
               <input type="text" class="form-control bg-dark-lighter  border-primary" id="inputDescription" placeholder="Description" required>
                 
             
-              <div class="modal-footer">
+              <div class="modal-footer border-0">
                
               <button type="reset" class="btn btn-outline-primary">Borrar</button>
               <button type="submit" class="btn btn-outline-primary">Enviar</button>

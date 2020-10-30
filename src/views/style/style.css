@@ -53,6 +53,18 @@
 .btn-outline-primary{
     border-color: var(--primary)!important;
     color: var(--primary)!important;
+    fill: var(--primary)!important;
+    background-color: var(--dark-lighter)!important;
+}
+
+.btn-outline-primary:hover{
+    background-color: var(--secondary-lighter)!important;
+}
+
+.btn-outline-primary:focus{
+    background-color: var(--primary)!important;
+    color: var(--dark)!important;
+    fill: var(--dark)!important;
 }
 
 .jumbotron{
