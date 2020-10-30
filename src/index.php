@@ -1,6 +1,6 @@
 <?php require "views/partials/header.php";?>
 
-<span>FORMULARIO DE VISITA</span>
+<span>FORMULARIO DE SOLICITUD DE CITA</span>
 
 
 <?php require "views/partials/form.php";?>
