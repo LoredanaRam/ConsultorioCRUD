@@ -1,3 +1,11 @@
+<?php 
+    
+    namespace App;
+    use App\model\appointment;
+
+    Appointment::showAllAppointments();
+
+?>
 
 <?php require "controller/dbconection.php";
     $database = new dbConection();
