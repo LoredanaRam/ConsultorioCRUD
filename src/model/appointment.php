@@ -1,7 +1,8 @@
 <?php
 
     namespace App\Model;
-    use dbConection;
+
+    require('dbconection.php');
 
     class Appointment {
         
@@ -13,7 +14,7 @@
         private $database;
         private $table = "citas";
 
-        public function __construct($name, $topic, $description){
+        public function __construct($name = '', $topic = '', $description = ''){
             
             $this->name = $name;
             $this->topic = $topic;
@@ -21,16 +22,13 @@
             
             //clausula de guarda
             if(!$this->database){
-                $this->database = new dbConection();
-                
+                $this->database = new DbConection();
             }
-        
         }
 
         public function showAllAppointments(){
-
-            $sql="SELECT * FROM `{$table}`";
-            $query = $self->database->mysql->query($sql);
+            $sql = "SELECT * FROM `{$this->table}`";
+            $query = $this->database->mysql->query($sql);
             var_dump ($query);
         }
 
@@ -52,9 +50,9 @@
 
     };
 ?>
+
 <?php 
-
-$prueba= new Appointment("a", "b", "c");
-$prueba->showAllAppointments();
-
+    $data = new Appointment();
+    $result = $data->showAllAppointments();
+    var_dump($result);
 ?>

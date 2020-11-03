@@ -1,10 +1,11 @@
 <?php
 
 namespace App\Model;
+
 use PDO;
 use PDOException;
 
-class dbConection {
+class DbConection {
 
    public $mysql;
 
@@ -15,7 +16,6 @@ class dbConection {
        } catch (PDOException $ex){
            echo $ex->getMessage();
        }
-
    }
 
    private function getConection()
@@ -34,3 +34,9 @@ class dbConection {
 
 }
 ?>
+
+<?php 
+/*     $database = new DbConection();
+    $data = $database->mysql->query("SELECT * FROM `citas`");
+    var_dump($data);
+ */?>
