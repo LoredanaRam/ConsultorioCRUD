@@ -1,6 +1,8 @@
 <?php 
     
     namespace App;
+
+    use App\Model\DbConection;
     use App\Model\Appointment;
 
     Appointment::showAllAppointments();
