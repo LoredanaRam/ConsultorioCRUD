@@ -1,5 +1,7 @@
 <?php
-    namespace App\model;
+
+    namespace App\Model;
+    use dbConection;
 
     class Appointment {
         
@@ -25,7 +27,7 @@
         
         }
 
-        public static function showAllAppointments(){
+        public function showAllAppointments(){
 
             $sql="SELECT * FROM `{$table}`";
             $query = $self->database->mysql->query($sql);
@@ -49,4 +51,10 @@
         }
 
     };
+?>
+<?php 
+
+$prueba= new Appointment("a", "b", "c");
+$prueba->showAllAppointments();
+
 ?>

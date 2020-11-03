@@ -1,7 +1,7 @@
 <?php 
     
     namespace App;
-    use App\model\appointment;
+    use App\Model\Appointment;
 
     Appointment::showAllAppointments();
 
