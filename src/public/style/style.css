@@ -70,7 +70,7 @@
 .jumbotron{
     background:
         linear-gradient(to right, var(--dark), transparent),
-        url("../../images/jumbotron-background.jpg");
+        url("../images/jumbotron-background.jpg");
     background-size: cover;
     background-position: 80%;
 }

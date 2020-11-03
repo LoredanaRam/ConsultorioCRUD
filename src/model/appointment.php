@@ -14,11 +14,12 @@
         private $database;
         private $table = "citas";
 
-        public function __construct($name = '', $topic = '', $description = ''){
+        public function __construct($name = '', $topic = '', $description = '', $date = ''){
             
             $this->name = $name;
             $this->topic = $topic;
             $this->description = $description;
+            $this->date = $date;
             
             //clausula de guarda
             if(!$this->database){
@@ -26,10 +27,36 @@
             }
         }
 
+        public function getName()
+        {
+            return $this->name;
+        }
+
+        public function getTopic()
+        {
+            return $this->topic;
+        }
+
+        public function getDescription()
+        {
+            return $this->description;
+        }
+
+        public function getDate() 
+        {
+            return $this->date;
+        }
+
         public function showAllAppointments(){
             $sql = "SELECT * FROM `{$this->table}`";
             $query = $this->database->mysql->query($sql);
-            var_dump ($query);
+            $appointmentArr = $query->fetchAll();
+            $appointmentList = [];
+            foreach ($appointmentArr as $cita) {
+                $appointmentRow = new Appointment($cita['nombre'], $cita['tema'], $cita['descripcion'], $cita['fecha']);
+                array_push($appointmentList, $appointmentRow);
+            }
+            return $appointmentList;
         }
 
         public function saveAppointment(){
@@ -49,10 +76,4 @@
         }
 
     };
-?>
-
-<?php 
-    $data = new Appointment();
-    $result = $data->showAllAppointments();
-    var_dump($result);
 ?>
