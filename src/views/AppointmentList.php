@@ -11,8 +11,8 @@
     </tr>
   </thead>
 
-  <tbody class="table-card-appointment">
         <?php foreach ($data['appointments'] as $appointment) { ?>
+          <tbody class="table-card-appointment">
             <tr class="table-appointments-row bg-dark-lighter">
               <td scope="row"><?= $appointment->getName() ?></td>
               <td><?= $appointment->getTopic() ?></td>
@@ -34,6 +34,6 @@
                   </div>
                 </td>
             </tr>
+          </tbody>
         <?php } ?>
-  </tbody>
 </table>
