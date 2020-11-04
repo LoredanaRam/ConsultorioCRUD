@@ -12,7 +12,19 @@ class AppointmentController {
 
     public function __construct()
     {
+        if (isset($_POST)&&($_POST["action"]=="create")){
+            $this->create();
+            return ;
+        }
         return $this->index();
+
+    }
+
+    public function create(array $request): void 
+    {
+        $newAppointment = new Appointment($request["nombre"] , $request["tema"] , $request ["descripcion"]); 
+        $newAppointment->saveAppointment();
+
     }
 
     public function index(): void
@@ -27,4 +39,5 @@ class AppointmentController {
 }
 
 ?>
+
 
