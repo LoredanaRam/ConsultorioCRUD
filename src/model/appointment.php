@@ -2,7 +2,9 @@
 
     namespace App\Model;
 
-    require('dbconection.php');
+    use App\Model\DbConection;
+
+    // require('Dbconection.php');
 
     class Appointment {
         

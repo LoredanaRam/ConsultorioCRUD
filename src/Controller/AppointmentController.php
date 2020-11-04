@@ -5,8 +5,8 @@ namespace App\Controller;
 use App\Core\View;
 use App\Model\Appointment;
 use phpDocumentor\Reflection\Location;
-require('src/Model/appointment.php');
-require('src/Core/View.php');
+// require('src/Model/appointment.php');
+// require('src/Core/View.php');
 
 class AppointmentController {
 
