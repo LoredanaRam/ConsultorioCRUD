@@ -68,7 +68,16 @@
         }
 
         public function saveAppointment(){
+            $sql = "INSERT INTO `{$this->table}` (`nombre`, `tema`, `descripcion`) VALUES ('$this->nombre', '$this->tema', '$this->descripcion');";
+            $query = $this->database->mysql->query($sql);  
             
+        }
+
+        public function findById($id){
+            $sql = "SELECT * FROM `{$this->table}` WHERE `{$this->table}`.`$id`= {$this->id}";
+            $query = $this->database->mysql->query($sql); 
+            $result = $query->fetchAll();
+            return $result; 
         }
 
         public function editAppointment($id){

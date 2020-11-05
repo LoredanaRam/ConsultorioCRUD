@@ -13,16 +13,10 @@
 
       <div class="modal-body bg-dark">
 
-          <form class="form-group" action="?action=create" method="post" >
+          <form class="form-group" action="?action=create" method="get" >
               
               <label for="inputName">Nombre</label>
               <input type="text" class="form-control bg-dark-lighter border-primary" id="inputName" name= "nombre" placeholder="Name" required>
-
-              <label for="inputSurname">Apellido</label>
-              <input type="text" class="form-control bg-dark-lighter  border-primary" id="inputSurname" name= "surname" placeholder="Surname" required>
-
-              
-
               <label for="inputReason" > Motivo de la visita</label>
               <select id="inputReason" class="form-control bg-dark-lighter  border-primary" name= "tema" required>
                 <option selected placeholder= "Choose an option"> </option>
