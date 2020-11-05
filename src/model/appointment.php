@@ -11,12 +11,12 @@
         private string $name;
         private string $topic;
         private string $description;
-        private ?string $id;
+        private ?int $id;
         private ?string $date;
         private $database;
         private $table = "citas";
 
-        public function __construct($name = '', $topic = '', $description = '', $date = '', $id = ''){
+        public function __construct($name = "", $topic = "", $description = "", $date = "", $id = null){
             
             $this->name = $name;
             $this->topic = $topic;
@@ -68,16 +68,17 @@
         }
 
         public function saveAppointment(){
-            $sql = "INSERT INTO `{$this->table}` (`nombre`, `tema`, `descripcion`) VALUES ('$this->nombre', '$this->tema', '$this->descripcion');";
-            $query = $this->database->mysql->query($sql);  
-            
+            $sql = "INSERT INTO `{$this->table}` (`nombre`, `tema`, `descripcion`) VALUES ('$this->name', '$this->topic', '$this->description');";
+            $query= $this->database->mysql->query($sql);              
         }
 
-        public function findById($id){
-            $sql = "SELECT * FROM `{$this->table}` WHERE `{$this->table}`.`$id`= {$this->id}";
-            $query = $this->database->mysql->query($sql); 
+        public static function findById($id): Appointment
+        {
+            $database = new DbConection();
+            $sql = "SELECT * FROM `citas`  WHERE `id` = $id";
+            $query = $database->mysql->query($sql); 
             $result = $query->fetchAll();
-            return $result; 
+            return new self($result[0]["nombre"], $result[0]["tema"], $result[0]["descripcion"]);
         }
 
         public function editAppointment($id){
@@ -85,7 +86,8 @@
         }
 
         public function deleteAppointment(){
-
+            $sql = "DELETE FROM `{$this->table}` WHERE `id`= {$this->id}";
+            $database->mysql->query($sql);
         }
 
         public function getAppointment($id){
@@ -93,3 +95,8 @@
         }
     };
 ?>
+
+<!-- $sql = "SELECT * FROM `{$this->table}`  WHERE `id` = $id";
+            $query = $this->database->mysql->query($sql); 
+            $result = $query->fetchAll();
+            return $result;  -->

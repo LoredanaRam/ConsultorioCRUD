@@ -12,37 +12,37 @@ class AppointmentController {
 
     public function __construct()
     {
-        if (isset($_GET)&& isset($_GET["action"])=="create"){
+        if (isset($_GET) && isset($_GET["action"]) == "create"){
             $this->create($_GET);
-            echo $_GET;
-            return ;
+            return;
         }
-        return $this->index();
 
-        if (isset($_GET)&& isset($_GET["action"])=="delete"){
-            $this->delete($_GET["id"]);
-            return ;
-            
+        if (isset($_GET) && isset($_GET["action"]) == "delete"){
+            $id = $_GET["id"];
+            $this->delete($id);
+            return;
         }
         
         return $this->index();
         
-
     }
 
     public function create(array $request): void 
     {
-        $newAppointment = new Appointment($request["nombre"] , $request["tema"] , $request ["descripcion"]); 
-        $newAppointment->saveAppointment();
+        if( isset($request["nombre"]) != null){
+
+            $newAppointment = new Appointment($request["nombre"] , $request["tema"] , $request ["descripcion"]);
+            $newAppointment->saveAppointment();
+        }
 
         $this->index();
 
     }
 
     public function delete($id){
-        $appointment = new Appointment();
-        $cita = $appointment->findById($id);
-        $cita->$delete();
+        $appointment = Appointment::findById($id);
+        $cita->$deleteAppointment();
+
         $this->index();
     }
 
