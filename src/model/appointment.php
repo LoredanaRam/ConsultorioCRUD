@@ -72,12 +72,13 @@
             $this->database->mysql->query($sql);              
         }
 
-        public function findById($id)
+        public static function findById($id)
         {
-            $sql = "SELECT * FROM `{$this->table}`  WHERE `id` = $id";
-            $query = $this->database->mysql->query($sql); 
+            $database = new DbConection();
+            $sql = "SELECT * FROM `citas`  WHERE `id` = {$id} ";
+            $query = $database->mysql->query($sql); 
             $result = $query->fetchAll();
-            return $result;
+            return new self($result[0]["nombre"], $result[0]["tema"], $result[0]["descripcion"]);
         }
 
         public function editAppointment($id){

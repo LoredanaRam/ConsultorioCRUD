@@ -22,6 +22,10 @@ class AppointmentController {
             $this->create($_POST);
             return;
         }
+        if (isset($_GET) && isset($_GET["action"]) && ($_GET["action"] == "upload")){
+            $this->upload($_POST["id"]);
+            return;
+        }
 
         return $this->index();
         
@@ -44,7 +48,12 @@ class AppointmentController {
         
         $this->index();
     }
+    public function upload($id){
+        echo 'function upload';
+        $appointment = Appointment::findById($id);
+        new View("AppointmentEdit", ["appointment" => $appointment]);
 
+    }
     public function index(): void
     {
         $appointment = new Appointment();

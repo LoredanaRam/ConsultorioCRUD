@@ -16,7 +16,6 @@
     <?php require "src/Views/partials/form.php"; ?>
 
     <div id="editFormContainer">
-        <?php require "src/Views/partials/formToEdit.php"; ?>
     </div>
 
 
