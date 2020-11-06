@@ -12,37 +12,36 @@ class AppointmentController {
 
     public function __construct()
     {
-        if (isset($_GET) && isset($_GET["action"]) == "create"){
-            $this->create($_GET);
-            return;
-        }
-
-        if (isset($_GET) && isset($_GET["action"]) == "delete"){
+        if (isset($_GET) && isset($_GET["action"]) && ($_GET["action"] == "delete")){
             $id = $_GET["id"];
             $this->delete($id);
             return;
         }
-        
+
+        if (isset($_GET) && isset($_GET["action"]) && ($_GET["action"] == "create")){
+            $this->create($_POST);
+            return;
+        }
+
         return $this->index();
         
     }
 
-    public function create(array $request): void 
+    public function create(array $data)
     {
-        if( isset($request["nombre"]) != null){
-
-            $newAppointment = new Appointment($request["nombre"] , $request["tema"] , $request ["descripcion"]);
-            $newAppointment->saveAppointment();
-        }
+        echo 'function create';
+        $newAppointment = new Appointment($data['nombre'], $data['tema'], $data['descripcion']);
+        $newAppointment->saveAppointment();
 
         $this->index();
-
     }
 
     public function delete($id){
-        $appointment = Appointment::findById($id);
-        $cita->$deleteAppointment();
-
+        echo 'function delete';
+        $appointment = new Appointment();
+        // $rowToDelete = $appointment->findById($id);
+        $appointment->deleteAppointment($id);
+        
         $this->index();
     }
 
@@ -55,8 +54,11 @@ class AppointmentController {
             "appointments" => $appointments,
         ]);
     }
+
 }
 
 ?>
 
-
+<?php 
+var_dump($_GET);
+?>
