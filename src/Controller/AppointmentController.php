@@ -12,24 +12,6 @@ class AppointmentController {
 
     public function __construct() // revisar si se puede hacer swich
     {
-        if (isset($_GET) && isset($_GET["action"]) && ($_GET["action"] == "delete")){
-            $id = $_GET["id"];
-            $this->delete($id);
-            return;
-        }
-        if (isset($_GET) && isset($_GET["action"]) && ($_GET["action"] == "create")){
-            $this->create($_POST);
-            return;
-        }
-        if (isset($_GET) && isset($_GET["action"]) && ($_GET["action"] == "upload")){
-            $this->upload($_POST["id"]);
-            return;
-        }
-        if (isset($_GET) && isset($_GET["action"]) && ($_GET["action"] == "update")){
-            $this->update($_POST);
-            return;
-        }
-
         return $this->index();
         
     }
@@ -42,17 +24,15 @@ class AppointmentController {
         $this->index();
     }
 
-    public function delete($id){
+    public function delete($data){
         $appointment = new Appointment();
         // $rowToDelete = $appointment->findById($id);
-        $appointment->deleteAppointment($id);
-        
-        $this->index();
+        $appointment->deleteAppointment($data["id"]);
+      
     }
-    public function upload($id){ //to do refactorizar nombre
-        $appointment = Appointment::findById($id);
-        new View("AppointmentEdit", ["appointment" => $appointment]);
-
+    public function getById($data){ //to do refactorizar nombre
+        $appointment = Appointment::findById($data["id"]);
+        return $appointment; 
     }
     public function update($appointment){
         $newAppointment = new Appointment($appointment['name'], $appointment['topic'], $appointment['description'], $appointment['id']);
