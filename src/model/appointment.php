@@ -81,8 +81,8 @@
             return new self($result[0]["nombre"], $result[0]["tema"], $result[0]["descripcion"]);
         }
 
-        public function editAppointment($id){
-
+        public function updateAppointment($data, $id){
+            $sql = "UPDATE `citas` SET `nombre` = '{$data["name"]}', `tema` = '{$data["topic"]}', `descripcion` = '{$data["description"]}' WHERE `id` = {$id} ";
         }
 
         public function deleteAppointment($id){
