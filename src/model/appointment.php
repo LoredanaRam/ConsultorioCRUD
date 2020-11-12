@@ -16,7 +16,7 @@
         private $database;
         private $table = "citas";
 
-        public function __construct($name = "nombre", $topic = "tema", $description = "descripcion", $date = "", $id = null){
+        public function __construct($name = "nombre", $topic = "tema", $description = "descripcion", $id = null, $date = ""){
             
             $this->name = $name;
             $this->topic = $topic;
@@ -81,8 +81,8 @@
             return new self($result[0]["nombre"], $result[0]["tema"], $result[0]["descripcion"]);
         }
 
-        public function updateAppointment($data, $id){
-            $sql = "UPDATE `citas` SET `nombre` = '{$data["name"]}', `tema` = '{$data["topic"]}', `descripcion` = '{$data["description"]}' WHERE `id` = {$id} ";
+        public function updateAppointment(){
+            $sql = "UPDATE `citas` SET `nombre` = '$this->name', `tema` = '$this->topic', `descripcion` = '$this->description' WHERE `id` = '$this->id' ";
         }
 
         public function deleteAppointment($id){
