@@ -83,6 +83,7 @@
 
         public function updateAppointment(){
             $sql = "UPDATE `citas` SET `nombre` = '$this->name', `tema` = '$this->topic', `descripcion` = '$this->description' WHERE `id` = '$this->id' ";
+            $this->database->mysql->query($sql);    
         }
 
         public function deleteAppointment($id){
