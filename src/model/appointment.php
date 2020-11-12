@@ -61,7 +61,7 @@
             $appointmentArr = $query->fetchAll();
             $appointmentList = [];
             foreach ($appointmentArr as $cita) {
-                $appointmentRow = new Appointment($cita['nombre'], $cita['tema'], $cita['descripcion'], $cita['fecha'], $cita['id']);
+                $appointmentRow = new Appointment($cita['nombre'], $cita['tema'], $cita['descripcion'], $cita['id'], $cita['fecha']);
                 array_push($appointmentList, $appointmentRow);
             }
             return $appointmentList;
