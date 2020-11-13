@@ -2,9 +2,9 @@
     
     namespace App;
 
-    use App\Controller\AppointmentController;
+    use App\Core\Api;
     //require('src/Controller/controller.php');
 
-    $controller = new AppointmentController();
+    $api = new Api();
 
 ?>

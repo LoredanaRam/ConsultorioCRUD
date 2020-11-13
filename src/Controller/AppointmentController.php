@@ -32,6 +32,12 @@ class AppointmentController {
         $newAppointment->updateAppointment();
     }
 
+    public function getAll(){
+        $appointment = new Appointment();
+        $appointments = $appointment->showAllAppointments();
+        return $appointments;
+
+    }
 
     public function index(): void
     {
@@ -42,6 +48,9 @@ class AppointmentController {
             "appointments" => $appointments,
         ]);
     }
+
+
+
 
 }
 

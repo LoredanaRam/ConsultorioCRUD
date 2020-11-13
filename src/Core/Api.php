@@ -42,8 +42,8 @@ class Api
 
         if ($_SERVER['REQUEST_URI'] == "/appointments")
         {
-            $this->Controller->getAll();
-            return;
+            return $this->Controller->getAll();
+            
         }
     }
 }
