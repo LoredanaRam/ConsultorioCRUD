@@ -10,12 +10,6 @@ use phpDocumentor\Reflection\Location;
 
 class AppointmentController {
 
-    public function __construct() // revisar si se puede hacer swich
-    {
-        return $this->index();
-        
-    }
-
     public function create(array $data)
     {
         $newAppointment = new Appointment($data['nombre'], $data['tema'], $data['descripcion']);
@@ -26,7 +20,6 @@ class AppointmentController {
 
     public function delete($data){
         $appointment = new Appointment();
-        // $rowToDelete = $appointment->findById($id);
         $appointment->deleteAppointment($data["id"]);
       
     }

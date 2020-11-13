@@ -44,10 +44,7 @@ class Api
         {
             $this->Controller->getAll();
             return;
-
         }
-
-
     }
 }
 
