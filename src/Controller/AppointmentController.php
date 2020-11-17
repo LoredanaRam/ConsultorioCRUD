@@ -28,7 +28,7 @@ class AppointmentController {
         return $appointment; 
     }
     public function update($appointment){
-        $newAppointment = new Appointment($appointment['name'], $appointment['topic'], $appointment['description'], $appointment['id']);
+        $newAppointment = new Appointment($appointment['name'], $appointment['topic'], $appointment['description'], $appointment['id'], $appointment['isDone']);
         $newAppointment->updateAppointment();
     }
 
