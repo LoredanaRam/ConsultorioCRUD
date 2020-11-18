@@ -14,8 +14,6 @@ class AppointmentController {
     {
         $newAppointment = new Appointment($data['nombre'], $data['tema'], $data['descripcion']);
         $newAppointment->saveAppointment();
-
-        $this->index();
     }
 
     public function delete($data){
@@ -35,23 +33,8 @@ class AppointmentController {
     public function getAll(){
         $appointment = new Appointment();
         $appointments = $appointment->showAllAppointments();
-        return $appointments;
-
+        return json_encode($appointments);
     }
-
-    public function index(): void
-    {
-        $appointment = new Appointment();
-        $appointments = $appointment->showAllAppointments();
-        
-        new View("AppointmentList", [
-            "appointments" => $appointments,
-        ]);
-    }
-
-
-
-
 }
 
 ?>

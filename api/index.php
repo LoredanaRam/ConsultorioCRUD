@@ -1,4 +1,4 @@
 <?php
-echo "esto es una api";
-
+    require("../vendor/autoload.php");
+    $api = new App\Core\Api();
 ?>

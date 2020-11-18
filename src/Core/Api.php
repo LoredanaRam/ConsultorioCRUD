@@ -11,9 +11,9 @@ class Api
     public function __construct() // revisar si se puede hacer switch
     {
         $this->Controller = new AppointmentController;
-    
+        echo $_SERVER['REQUEST_URI'];
 
-        if ($_SERVER['REQUEST_URI'] == "/appointment")
+        if ($_SERVER['REQUEST_URI'] == "/consultorioF5/api/appointment/")
         {
             if ($_SERVER['REQUEST_METHOD'] == "GET")
             {
@@ -40,10 +40,10 @@ class Api
             }
         }
 
-        if ($_SERVER['REQUEST_URI'] == "/appointments")
+        if ($_SERVER['REQUEST_URI'] == "/consultorioF5/api/appointments/")
         {
-            return $this->Controller->getAll();
-            
+            header('Content-Type: application/json');
+            echo $this->Controller->getAll(); 
         }
     }
 }

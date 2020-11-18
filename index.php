@@ -19,12 +19,7 @@
     </div>
 
 
-    <div id="appointment-table-container" class="d-flex flex-column justify-content-center align-items-center">
-        <?php 
-            require("vendor/autoload.php");
-            require("src/index.php");
-        ?>
-    </div>
+    <div id="appointment-table-container" class="d-flex flex-column justify-content-center align-items-center"></div>
 
     <?php require "src/Views/partials/scripts.php"; ?>
     <?php require "src/Views/partials/footer.php"; ?>
