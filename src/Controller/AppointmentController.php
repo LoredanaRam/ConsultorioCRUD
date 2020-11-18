@@ -12,7 +12,8 @@ class AppointmentController {
 
     public function create(array $data)
     {
-        $newAppointment = new Appointment($data['nombre'], $data['tema'], $data['descripcion']);
+        $dataJson = json_decode(file_get_contents("php://input"), true);
+        $newAppointment = new Appointment($dataJson['nombre'], $dataJson['tema'], $dataJson['descripcion']);
         $newAppointment->saveAppointment();
     }
 
@@ -36,7 +37,8 @@ class AppointmentController {
         
     }
     public function update($appointment){
-        $newAppointment = new Appointment($appointment['name'], $appointment['topic'], $appointment['description'], $appointment['id'], $appointment['isDone']);
+        $dataJson = json_decode(file_get_contents("php://input"), true);
+        $newAppointment = new Appointment($dataJson['name'], $dataJson['topic'], $dataJson['description'], $dataJson['id'], $dataJson['isDone']);
         $newAppointment->updateAppointment();
     }
 

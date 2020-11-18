@@ -30,7 +30,7 @@ class Api
 
             if ($_SERVER['REQUEST_METHOD'] == "PUT")
             {
-                $this->Controller->update($_PUT);
+                $this->Controller->update($_POST);
                 
             }
 
