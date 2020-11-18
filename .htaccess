@@ -3,4 +3,4 @@ RewriteBase /consultorioF5/
 options +FollowSymLinks
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.+?)/?$ index.php?url=$1 [L,QSA]
+RewriteRule ^(.+?)/?$ api/index.php?url=$1 [L,QSA]

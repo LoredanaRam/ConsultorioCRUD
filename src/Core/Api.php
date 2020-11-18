@@ -13,7 +13,7 @@ class Api
         $this->Controller = new AppointmentController;
         echo $_SERVER['REQUEST_URI'];
 
-        if ($_SERVER['REQUEST_URI'] == "/consultorioF5/api/appointment/")
+        if ($_SERVER['REQUEST_URI'] == "/consultorioF5/api/appointment")
         {
             if ($_SERVER['REQUEST_METHOD'] == "GET")
             {
@@ -40,10 +40,9 @@ class Api
             }
         }
 
-        if ($_SERVER['REQUEST_URI'] == "/consultorioF5/api/appointments/")
+        if ($_SERVER['REQUEST_URI'] == "/consultorioF5/api/appointments")
         {
-            header('Content-Type: application/json');
-            echo $this->Controller->getAll(); 
+            $this->Controller->getAll();
         }
     }
 }

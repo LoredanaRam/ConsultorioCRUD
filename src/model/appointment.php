@@ -104,17 +104,3 @@
         }
     };
 ?>
-
-<!-- $sql = "SELECT * FROM `{$this->table}`  WHERE `id` = $id";
-    $query = $this->database->mysql->query($sql); 
-    $result = $query->fetchAll();
-    return $result;  -->
-
-<!-- public static function findById($id)
-{
-    $database = new DbConection();
-    $sql = "SELECT * FROM `citas`  WHERE `id` = {$id} ";
-    $query = $database->mysql->query($sql); 
-    $result = $query->fetchAll();
-    return new self($result[0]["nombre"], $result[0]["tema"], $result[0]["descripcion"]);
-} -->
