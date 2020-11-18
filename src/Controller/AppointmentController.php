@@ -22,8 +22,14 @@ class AppointmentController {
       
     }
     public function getById($data){ //to do refactorizar nombre
-        $appointment = Appointment::findById($data["id"]);
-        return $appointment; 
+        var_dump($data);
+        $appointment = Appointment::findById(25);
+        
+        
+
+
+
+
     }
     public function update($appointment){
         $newAppointment = new Appointment($appointment['name'], $appointment['topic'], $appointment['description'], $appointment['id'], $appointment['isDone']);

@@ -11,13 +11,14 @@ class Api
     public function __construct() // revisar si se puede hacer switch
     {
         $this->Controller = new AppointmentController;
-        echo $_SERVER['REQUEST_URI'];
+        var_dump($_GET);
 
         if ($_SERVER['REQUEST_URI'] == "/consultorioF5/api/appointment")
         {
             if ($_SERVER['REQUEST_METHOD'] == "GET")
             {
                 $this->Controller->getById($_GET);
+                var_dump($_GET);
                 
             }
 
