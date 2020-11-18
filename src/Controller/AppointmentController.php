@@ -33,7 +33,23 @@ class AppointmentController {
     public function getAll(){
         $appointment = new Appointment();
         $appointments = $appointment->showAllAppointments();
-        return json_encode($appointments);
+        $appointmentResponse = [];
+        foreach ($appointments as $appointment) {
+            array_push($appointmentResponse, [
+                
+                "name" => $appointment->getName(),
+                "topic" => $appointment->getTopic(),
+                "description" => $appointment->getDescription(),
+                "date" => $appointment->getDate(),
+                "id" => $appointment->getId(),
+                "isDone" => $appointment->getIsDone(),
+               
+            ]);
+        }
+
+        echo json_encode($appointmentResponse);
+    
+        
     }
 }
 

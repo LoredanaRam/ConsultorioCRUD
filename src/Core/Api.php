@@ -18,25 +18,25 @@ class Api
             if ($_SERVER['REQUEST_METHOD'] == "GET")
             {
                 $this->Controller->getById($_GET);
-                return;
+                
             }
 
             if ($_SERVER['REQUEST_METHOD'] == "POST")
             {
                 $this->Controller->create($_POST);
-                return;
+                
             }
 
             if ($_SERVER['REQUEST_METHOD'] == "PUT")
             {
                 $this->Controller->update($_PUT);
-                return;
+                
             }
 
             if ($_SERVER['REQUEST_METHOD'] == "DELETE")
             {
                 $this->Controller->delete($_DELETE);
-                return;
+                
             }
         }
 

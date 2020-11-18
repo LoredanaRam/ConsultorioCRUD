@@ -71,8 +71,11 @@
             foreach ($appointmentArr as $cita) {
                 $appointmentRow = new Appointment($cita['nombre'], $cita['tema'], $cita['descripcion'], $cita['id'], $cita['fecha'], $cita['realizada'] );
                 array_push($appointmentList, $appointmentRow);
+          
             }
+           
             return $appointmentList;
+            
         }
 
         public function saveAppointment(){
