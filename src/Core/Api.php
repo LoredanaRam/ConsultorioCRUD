@@ -13,7 +13,7 @@ class Api
         $this->Controller = new AppointmentController;
         var_dump($_GET);
 
-        if ($_SERVER['REQUEST_URI'] == "/consultorioF5/api/appointment")
+        if ($_GET["url"] == "api/appointment")
         {
             if ($_SERVER['REQUEST_METHOD'] == "GET")
             {
@@ -41,7 +41,7 @@ class Api
             }
         }
 
-        if ($_SERVER['REQUEST_URI'] == "/consultorioF5/api/appointments")
+        if ($_GET["url"] == "api/appointments") 
         {
             $this->Controller->getAll();
         }
