@@ -24,7 +24,13 @@ class AppointmentController {
     public function getById($data){ //to do refactorizar nombre
         //var_dump($data["id"]);
         $appointment = Appointment::findById($data["id"]);
-        $appointmentResponse = [$appointment->getName(), $appointment->getTopic(), $appointment->getDescription(), $appointment->getId(), $appointment->getIsDone(), $appointment->getDate()];  
+        $appointmentResponse = ["name" => $appointment->getName(),
+        "topic" => $appointment->getTopic(),
+        "description" => $appointment->getDescription(),
+        "date" => $appointment->getDate(),
+        "id" => $appointment->getId(),
+        "isDone" => $appointment->getIsDone()]; 
+         
         
          echo json_encode($appointmentResponse);
         
