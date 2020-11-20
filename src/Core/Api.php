@@ -35,7 +35,7 @@ class Api
 
             if ($_SERVER['REQUEST_METHOD'] == "DELETE")
             {
-                $this->Controller->delete($_DELETE);
+                $this->Controller->delete($_GET);
                 
             }
         }

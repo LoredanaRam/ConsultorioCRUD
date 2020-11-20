@@ -14,12 +14,15 @@
     <?php require "src/Views/partials/header.php"; ?>
     <?php require "src/Views/partials/navbar.php"; ?>
     <?php require "src/Views/partials/form.php"; ?>
+    <?php require "src/Views/partials/formToEdit.php"; ?>
 
     <div id="editFormContainer">
     </div>
 
 
-    <div id="appointment-table-container" class="d-flex flex-column justify-content-center align-items-center"></div>
+    <div id="appointment-table-container" class="d-flex flex-column justify-content-center align-items-center">
+        <?php require "src/Views/AppointmentList.php"; ?>
+    </div>
 
     <?php require "src/Views/partials/scripts.php"; ?>
     <?php require "src/Views/partials/footer.php"; ?>

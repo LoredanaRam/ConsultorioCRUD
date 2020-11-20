@@ -34,7 +34,7 @@
               <div class="modal-footer border-0">
                
               <button type="reset" class="btn btn-outline-primary">Borrar</button>
-              <button type="submit" class="btn btn-outline-primary">Enviar</button>
+              <button id="save-appointment-button" type="button" class="btn btn-outline-primary">Enviar</button>
 
               </div>
           </form>
@@ -42,9 +42,9 @@
   </div>
 </div>
 
-<div class="alert alert-success" role="alert"> 
+<!-- <div class="alert alert-success" role="alert"> 
       Ha pedido su cita con éxito! 
-</div>
+</div> -->
 
 
 </section>

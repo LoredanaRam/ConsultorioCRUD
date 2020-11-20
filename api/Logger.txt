@@ -1,1 +1,9 @@
 fecha: 20/11/2020 11:21:22 cita: pruebita1 action: update id: 48 
+fecha: 20/11/2020 12:09:29 cita: nombre action: delete id:  
+fecha: 20/11/2020 12:09:58 cita: nombre action: delete id:  
+fecha: 20/11/2020 12:11:02 cita: nombre action: delete id:  
+fecha: 20/11/2020 12:12:36 cita: nombre action: delete id:  
+fecha: 20/11/2020 12:14:10 cita: nombre action: delete id:  
+fecha: 20/11/2020 12:24:02 cita: Cita desde front con API action: create id:  
+fecha: 20/11/2020 12:25:02 cita: Cita desde front con API action: create id:  
+fecha: 20/11/2020 12:26:06 cita:  action: create id:  

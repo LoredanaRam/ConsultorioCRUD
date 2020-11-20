@@ -1,4 +1,4 @@
-const tableURL = "http://localhost/consultorioF5/main.php"; //create true endpoint
-const editFormURL = "http://localhost/consultorioF5/main.php";
+const tableURL = "http://localhost/consultorioF5/api/appointments"; //create true endpoint
+const appointmentURL = "http://localhost/consultorioF5/api/appointment";
 
-export { tableURL, editFormURL };
+export { tableURL, appointmentURL };

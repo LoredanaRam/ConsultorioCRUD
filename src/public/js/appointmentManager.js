@@ -1,6 +1,8 @@
 import tableBuilder from "./tableBuilder.js";
 import editFormBuilder from "./editFormBuilder.js";
 
+import { appointmentURL } from "./routes.js";
+
 export default class appointmentManager {
 
     tableBuilderInstance = new tableBuilder();
@@ -12,7 +14,11 @@ export default class appointmentManager {
         {
             //tableBuilderInstance.rebuildAppointmentTable();
             let appointmentId = this.findAppointmentNode(event.target).id;
-            console.log("deleting", appointmentId);
+            console.log(appointmentURL + "?id=" + appointmentId);
+            fetch(appointmentURL + "?id=" + appointmentId, {
+                method: 'delete'
+            });
+            this.tableBuilderInstance.rebuildAppointmentTable();
         }
     }
     

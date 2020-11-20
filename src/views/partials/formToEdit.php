@@ -1,4 +1,5 @@
 <section>
+
 <div class="modal fade" id="modalFormEdit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -15,11 +16,10 @@
           <form class="form-group" action="upload" method="POST">
               
               <label for="inputEditName">Nombre</label>
-              <input type="text" class="form-control bg-dark-lighter border-primary" id="inputEditName" placeholder="Name" value="<?= $appointment->getName() ?>" required>
-
+              <input type="text" class="form-control bg-dark-lighter border-primary" id="inputEditName" placeholder="Name" value="" required>
               <label for="inputEditReason">Motivo de la visita</label>
               <select id="inputEditReason" class="form-control bg-dark-lighter  border-primary" required>
-                <option selected><?= $appointment->getTopic() ?></option>
+                <option selected></option>
                   <option>no me anda el php</option>
                   <option>el perro se comió mi tarea</option>
                   <option>ayudenme porfavor señor Sergi</option>
@@ -28,17 +28,15 @@
 
 
               <label for="inputEditDescription">Detalle su inquietud</label>
-              <input type="text" class="form-control bg-dark-lighter  border-primary" id="inputEditDescription" placeholder="Description" value="<?= $appointment->getDescription() ?>" required>
+              <input type="text" class="form-control bg-dark-lighter  border-primary" id="inputEditDescription" placeholder="Description" value="" required>
                 
             
               <div class="modal-footer border-0">
-               
-              <button type="reset" class="btn btn-outline-primary">Borrar</button>
-              <button type="submit" class="btn btn-outline-primary">Enviar</button>
-
+                <button type="reset" class="btn btn-outline-primary">Borrar</button>
+                <button id="update-appointment-button" type="button" class="btn btn-outline-primary">Enviar</button>
               </div>
           </form>
-    </div>
+      </div>
   </div>
 </div>
 </section>
