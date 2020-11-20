@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Core\View;
 use App\Model\Appointment;
 use phpDocumentor\Reflection\Location;
+use App\Logger\Logger;
 // require('src/Model/appointment.php');
 // require('src/Core/View.php');
 
@@ -15,11 +16,15 @@ class AppointmentController {
         $dataJson = json_decode(file_get_contents("php://input"), true);
         $newAppointment = new Appointment($dataJson['nombre'], $dataJson['tema'], $dataJson['descripcion']);
         $newAppointment->saveAppointment();
+        $logger = new Logger($newAppointment, "create");
+        $logger->log();
     }
 
     public function delete($data){
         $appointment = new Appointment();
         $appointment->deleteAppointment($data["id"]);
+        $logger = new Logger($appointment, "delete");
+        $logger->log();
       
     }
     public function getById($data){ //to do refactorizar nombre
@@ -40,6 +45,8 @@ class AppointmentController {
         $dataJson = json_decode(file_get_contents("php://input"), true);
         $newAppointment = new Appointment($dataJson['name'], $dataJson['topic'], $dataJson['description'], $dataJson['id'], $dataJson['isDone']);
         $newAppointment->updateAppointment();
+        $logger = new Logger($newAppointment, "update");
+        $logger->log();
     }
 
     public function getAll(){
@@ -63,6 +70,7 @@ class AppointmentController {
     
         
     }
+
 }
 
 ?>

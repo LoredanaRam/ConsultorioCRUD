@@ -11,14 +11,13 @@ class Api
     public function __construct() // revisar si se puede hacer switch
     {
         $this->Controller = new AppointmentController;
-        var_dump($_GET);
-
+      
         if ($_GET["url"] == "api/appointment")
         {
             if ($_SERVER['REQUEST_METHOD'] == "GET")
             {
                 $this->Controller->getById($_GET);
-                var_dump($_GET);
+                
                 
             }
 
