@@ -7,3 +7,5 @@ fecha: 20/11/2020 12:14:10 cita: nombre action: delete id:
 fecha: 20/11/2020 12:24:02 cita: Cita desde front con API action: create id:  
 fecha: 20/11/2020 12:25:02 cita: Cita desde front con API action: create id:  
 fecha: 20/11/2020 12:26:06 cita:  action: create id:  
+fecha: 20/11/2020 13:06:07 cita:  action: update id: 44 
+fecha: 20/11/2020 13:07:01 cita: Lulú editado action: update id: 44 

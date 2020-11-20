@@ -7,6 +7,8 @@ export default class appointmentManager {
 
     tableBuilderInstance = new tableBuilder();
     editFormBuilderInstance = new editFormBuilder();
+
+    currentAppointmentUpdate;
     
     deleteAppointment = (event) =>
     {
@@ -26,10 +28,13 @@ export default class appointmentManager {
     {
         if (event.target && event.target.matches(".btn-edit"))
         {
+            console.log("testing!!!!!!!!!!!!");
             //tableBuilderInstance.rebuildAppointmentTable();
             let appointmentId = this.findAppointmentNode(event.target).id;
             this.editFormBuilderInstance.getForm(appointmentId)
             console.log("editing", appointmentId);
+
+            this.currentAppointmentUpdate = appointmentId;
         }
     }
     

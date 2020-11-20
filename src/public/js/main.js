@@ -25,3 +25,19 @@ document.getElementById('save-appointment-button').addEventListener('click', (ev
         tableBuilderInstance.rebuildAppointmentTable();
     })
 });
+
+document.getElementById('update-appointment-button').addEventListener('click', (event) => {
+    let formData = {
+        name: document.getElementById('inputEditName').value,
+        topic: document.getElementById('inputEditReason').value,
+        description: document.getElementById('inputEditDescription').value,
+        id: appointmentManagerInstance.currentAppointmentUpdate
+    }
+
+    fetch(appointmentURL, {
+        method: 'put',
+        body: JSON.stringify(formData)
+    }).then(()=>{
+        tableBuilderInstance.rebuildAppointmentTable();
+    })
+});
